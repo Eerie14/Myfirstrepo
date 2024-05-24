@@ -6,4 +6,18 @@ padding: 0;
    height: 280px; 
    width: 100%;
    color:white;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+   
+}
+#NombrePilares {
+    width: 400px;
+}
+body {
+    font-family: "Roboto";
+}
+#redes {
+    display: flex;
+    align-content: space-between;
 }
