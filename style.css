@@ -21,3 +21,21 @@ body {
     display: flex;
     align-content: space-between;
 }
+#content {
+    display: flex;
+    flex-direction: row;
+}
+#categoria{
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    background-color: #179BE5;
+    border: none;
+    color: white;
+    padding: 350 px 46 px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24 px;
+}
