@@ -33,9 +33,18 @@ body {
     background-color: #179BE5;
     border: none;
     color: white;
-    padding: 350 px 46 px ;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24 px;
+    font-size: 24px;
+    width: 350px;
+    height: 46px;
+    padding: 14px 24px 40px;
+    border-radius: 12px;
+}
+#categorias{
+    background-image: url(Assets/child\ 1.png);
+    color: white;
+    width: 425px;
+    height: 106px;
 }
