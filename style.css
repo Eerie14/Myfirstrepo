@@ -24,6 +24,8 @@ body {
 #content {
     display: flex;
     flex-direction: row;
+    margin-left: 15px;
+    color: #951B44;
 }
 #categoria{
     display: flex;
