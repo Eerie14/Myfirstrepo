@@ -1,0 +1,21 @@
+.w-h {
+    width: 400px;
+    height: 400px;
+}
+
+#container{
+    display:grid;
+    grid-template-columns: 1fr, 1fr, 1rf, 1fr;
+    grid-template-rows: repeat (4,fr);
+}
+
+#card-1 {
+    width: 400px
+    height: 400px
+    border-radious: 15px
+}
+
+#card-2 {
+}
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
