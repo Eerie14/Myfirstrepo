@@ -1,15 +1,12 @@
 #m-container {
     display: flex;
 }
-#header {
-
+header {
     display: flex;
     font-style: Roboto;
+    background-image: url(../Assets/Banner_final.jpg);
+    background-repeat: no-repeat;
 }
-#banner {
-    background-image: url(Assets/Banner\ \(1\)\(1\).jpg);
-}
-
 #nombre_pilares {
     display: flex;
     width: 1980px;
