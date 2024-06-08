@@ -23,15 +23,16 @@ body{
     align-self: start;
 }
 #m-container{
-    max-width: 1460px;
+    max-width: 460px;
     margin: 0 auto;
     padding: 0 50px 0 50px;
 }
 #header{
-    background-image: url(../Assets/Banner.jpg);
+    background-image: url(Assets/Banner460px.jpg);
     color: white;
     justify-content: space-between;
-    height: 280px;  
+    width: 400px;
+    height: 200px;
 }
 #logos{
 }
@@ -40,17 +41,29 @@ body{
     padding-top: 25px;
 }
 #categoria{
-    height: 100px;
-    width: 450px;
-    background-image: url(../Assets/ImgCategoria.jpg);
+    height: 26px;
+    width: 92px;
+    border-radius: 10%;
+    background-image: url();
     background-repeat: no-repeat;
     color: white;
     text-align: center;
     align-content: center;
     margin: 13px 0 13px 0;
+    font-size: xx-small;
+}
+.btn{
+    border-color: hotpink;
+    border-style: groove;
 }
 #Talleres{
     min-width: 800px;
+    display: flex;
+    columns: auto;
+}
+#talleres_container{
+    display: flex;
+    columns: auto;
 }
 #searcher{
     display: flex;
@@ -67,7 +80,8 @@ body{
     cursor:pointer;
   }
   #taller{
-    display:none
+    display: flex;
+    columns: auto;
   }
   #taller.active{
     display:block
@@ -91,4 +105,69 @@ body{
     h1{
         color: purple;
     }
+  }
+  @media only screen and (max-width: 460px) {
+    h1{
+        color: whitesmoke;
+    }
+    #m-container{
+        max-width: 460px;
+        margin: 0 auto;
+        padding: 0 50px 0 50px;
+    }
+    #header{
+        background-image: url(Assets/Banner460px.jpg);
+        color: white;
+        justify-content: space-between;
+        width: 460px;
+        height: 200px;
+    }
+    #content{
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+
+    }
+    #categorias{
+        font-size: large;
+        flex-direction: column;
+        column-count: auto;
+        background-color: aliceblue;
+    }
+    #Talleres{
+        width: 150%;
+        flex-direction: column;
+        min-width: 800px;
+    }
+    #t-descripcion{
+        display: flex;
+        flex-direction: column;
+        grid-column: auto;
+    }
+    #categoria{
+        height: 100px;
+        width: 400px;
+        border-radius: 10%;
+        background-image: url(Assets/child\ 1.png);
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        align-content: center;
+        margin: 13px 0 13px 0;
+        font-size: medium;
+    }
+    .btn{
+        border-style: groove;
+        width: 600px;
+        border-radius: 10%;
+        border-color: lightpink;
+    }
+    #searcher{
+        width: 100%;
+    }
+    .btn-edit{
+        border-radius: 10%;
+        width: 20%;
+    }
+    
   }
