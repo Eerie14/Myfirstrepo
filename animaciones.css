@@ -25,7 +25,7 @@
     background-color: pink;
     border: 1px solid #000;
     animation-name: cambiocolor;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-name: position;
     animation-duration: 9s;
     animation-iteration-count: 3;
@@ -37,10 +37,16 @@
     border-radius: 450px;
     animation-name: tamano;
     animation-duration: 9s;
-    animation-iteration-count: 3;
-    animation-delay: -3;
-    animation-name: position;
-    animation-duration: 9s;
-    animation-iteration-count: 3;
-    
+    animation-delay: -9s;
+    animation-iteration-count: 3; 
+}
+#boton{
+    height: 100px;
+    width: 200px;
+    background-color: darkcyan;
+    color: whitesmoke;
+}
+#boton:hover{
+    background-color: fuchsia;
+    color: black;
 }
