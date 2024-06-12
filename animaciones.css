@@ -1,0 +1,46 @@
+@keyframes cambiocolor{
+    from{background-color: pink;}
+    to{background-color: aqua;}
+}
+@keyframes tamano{
+
+    10%{height: 200px; 
+        width: 200px;}
+
+    50%{height: 800px;
+        width: 800px;}
+
+    100%{height: 100px;
+        width: 100px;}
+}
+@keyframes position{
+    from{position: absolute;
+    left: 10px;}
+    to{left: 1000px;
+    position: absolute;}
+}
+#cuadrado{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    border: 1px solid #000;
+    animation-name: cambiocolor;
+    animation-duration: 3s;
+    animation-name: position;
+    animation-duration: 9s;
+    animation-iteration-count: 3;
+}
+#circulo{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    border-radius: 450px;
+    animation-name: tamano;
+    animation-duration: 9s;
+    animation-iteration-count: 3;
+    animation-delay: -3;
+    animation-name: position;
+    animation-duration: 9s;
+    animation-iteration-count: 3;
+    
+}
