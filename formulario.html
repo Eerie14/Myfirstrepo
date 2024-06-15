@@ -16,9 +16,26 @@
                 <input id="Nombre-taller" type="text" placeholder="Escribe tu nombre">
                 <input id="Nombre-tallerista" type="text" placeholder="Escribe nombre del tallerista">
                 <input id="Descipcion-taller" type="text" placeholder="Breve descipción">
-                <div id="dia-horario">
-                    <p>Lun</p>
-                    <input id="dia-semana" type="text" placeholder="Selecciona el día">
+                <div id="date-time">
+                    <div id="text-date-time">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div id="input-date-time">
+                        <select id="dias">
+                            <option value="1">Lun</option>
+                            <option value="2">Mar</option>
+                            <option value="3">Mié</option>
+                            <option value="4">Jue</option>
+                            <option value="5">Vie</option>
+                            <option value="6">Sáb</option>
+                        </select>
+                        <input type="time" id="hora-taller" name="hora-inicio" min="09:00" max="20:00">
+                        <input type="time" id="hora-taller" name="hora-final" min="09:00" max="20:00">
+                        <button type="button">Añadir día</button>
+                        
+                    </div>
                 </div>
             </div>
         </div>
