@@ -1,0 +1,34 @@
+#talleres-container{
+}
+#taller-form{
+}
+#datos-container{
+    display: flex;
+    flex-direction: row;
+}
+#Nombre-taller{
+    width: 375px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+#Nombre-tallerista{
+    width: 375px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+#Descripcion-taller{
+    width: 375px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+#dias{
+    width: 65px;
+    height: 40px;
+    margin-bottom: 3%;
+}
+#form-colum-left{
+
+}

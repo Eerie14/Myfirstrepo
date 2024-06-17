@@ -8,37 +8,44 @@
 </head>
 <body>
     <div id="talleres-container">
-        <form id="taller form"></form>
-        <h1>CREA TU TALLER</h1>
-        <div id="datos-container">
-            <div id="form-colum-left">
-                <p>Llene todos los campos</p>
-                <input id="Nombre-taller" type="text" placeholder="Escribe tu nombre">
-                <input id="Nombre-tallerista" type="text" placeholder="Escribe nombre del tallerista">
-                <input id="Descipcion-taller" type="text" placeholder="Breve descipción">
-                <div id="date-time">
-                    <div id="text-date-time">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <div id="input-date-time">
-                        <select id="dias">
-                            <option value="1">Lun</option>
-                            <option value="2">Mar</option>
-                            <option value="3">Mié</option>
-                            <option value="4">Jue</option>
-                            <option value="5">Vie</option>
-                            <option value="6">Sáb</option>
-                        </select>
-                        <input type="time" id="hora-taller" name="hora-inicio" min="09:00" max="20:00">
-                        <input type="time" id="hora-taller" name="hora-final" min="09:00" max="20:00">
-                        <button type="button">Añadir día</button>
-                        
+        <form id="taller-form">
+            <h1>CREA TU TALLER</h1>
+            <div id="datos-container">
+                <div id="form-colum-left">
+                    <p>Llene todos los campos</p>
+                    <input id="Nombre-taller" type="text" placeholder="Escribe tu nombre">
+                    <input id="Nombre-tallerista" type="text" placeholder="Escribe nombre del tallerista">
+                    <input id="Descripcion-taller" type="text" placeholder="Breve descipción">
+                    <p>Selecciona los días</p>
+                    <div id="date-time">
+                        <div id="text-date-time">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div id="input-date-time">
+                            <select id="dias">
+                                <option value="1">Lun</option>
+                                <option value="2">Mar</option>
+                                <option value="3">Mié</option>
+                                <option value="4">Jue</option>
+                                <option value="5">Vie</option>
+                                <option value="6">Sáb</option>
+                            </select>
+                            <input type="time" id="hora-taller" name="hora-inicio" min="09:00" max="20:00">
+                            <input type="time" id="hora-taller" name="hora-final" min="09:00" max="20:00">
+                            <button type="button">Añadir día</button>
+                            
+                        </div>
                     </div>
                 </div>
+                <div id="form-colum-right">
+                    <input type="email">
+                    <input type="number">
+                    <input type="file" accept=".jpg .png .pdf">
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </body>
 </html>
