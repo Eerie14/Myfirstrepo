@@ -1,0 +1,8 @@
+#grid-galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr repeat(3);
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 1295px;
+    height: 605px;
+    gap: 5px;
+}
