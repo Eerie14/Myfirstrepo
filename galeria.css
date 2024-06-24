@@ -34,3 +34,18 @@
     grid-column:
     grid-row:
 }
+@media screen {
+    max-width: ;
+}
+#imagenes{
+    position: relative;
+}
+#degradado{
+    position: absolute;
+    z-index: 1 ;
+    display: opacity;
+    height: 100%;
+    width: 100%;
+    background: rgb(2,0,36);
+    background:linear-gradient(180deg, rgba(158,29,72,1) 0%, rgba(158,29,72,1) 35%, rgba(158,29,72,1) 100%);
+}
