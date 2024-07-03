@@ -7,6 +7,7 @@
     gap: 5px;
 }
 .img-v {
+    position: relative;
     grid-column: 1/2;
     grid-row: 1/4;
     overflow:hidden;
@@ -18,7 +19,7 @@
 #degradado{
     position: absolute;
     opacity: 0%;
-    z-index: 1 ;
+    z-index: 1;
     height: 100%;
     width: 100%;
 }
@@ -27,4 +28,28 @@
     opacity: 100%;
     background: rgb(56,10,26);
     background: linear-gradient(180deg, rgba(56,10,26,1) 0%, rgba(255,255,255,0) 100%);
+}
+#popcontainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+}
+#popupcontent{
+    margin: 0 auto;
+    width: 1133px;
+}
+#popuptittle{
+    position: relative;
+    display: flex;
+    text-align: center;
+}
+#cross{
+    position: absolute;
+    top:0;
+    right: 0;
 }
