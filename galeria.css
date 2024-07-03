@@ -1,51 +1,24 @@
 #grid-galeria{
-    position: relative;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat (3, 1fr);
     width: 1295px;
-    height: 605px;
+    height: 650px;
     gap: 5px;
 }
-#img1 {
-    position: relative;
+.img-v {
     grid-column: 1/2;
     grid-row: 1/4;
+    overflow:hidden;
 }
-#img2{
-    position: relative;
-    grid-column:
-    grid-row:
-}
-.img3{
-    grid-column:
-    grid-row:
-}
-#img4{
-    position: relative;
-    grid-column: 3/4;
-    grid-row: 3/4;
-}
-.img5{
-    grid-column:
-    grid-row:
-}
-.img6{
-    grid-column:
-    grid-row:
-}
-.img7{
-    grid-column:
-    grid-row:
-}
-#imagenes{
-    position: relative;
+.img{
+    position:relative;
+    overflow: hidden;
 }
 #degradado{
     position: absolute;
     opacity: 0%;
     z-index: 1 ;
-    display: opacity;
     height: 100%;
     width: 100%;
 }
