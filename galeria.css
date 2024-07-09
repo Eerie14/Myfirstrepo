@@ -30,6 +30,7 @@
     background: linear-gradient(180deg, rgba(56,10,26,1) 0%, rgba(255,255,255,0) 100%);
 }
 #popcontainer{
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,8 +39,16 @@
     width: 100vw;
     height: 100vw;
     text-align: center;
+    background: rgba(81, 71, 71, 0.51);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+    border: 1px solid rgba(81, 71, 71, 0.3);
 }
 #popupcontent{
+    position: relative;
+    text-align: center;
     margin: 0 auto;
     width: 1133px;
 }
@@ -47,9 +56,20 @@
     position: relative;
     display: flex;
     text-align: center;
+    width: 100%;
+}
+#titulo{
 }
 #cross{
     position: absolute;
     top:0;
     right: 0;
+}
+#slider{
+    display: flex;
+    align-items: center;
+}
+#fotoprincipal{
+    margin-left: 10px;
+    margin-right: 10px;
 }
