@@ -1,7 +1,11 @@
-var cambio = prompt (ingrese el cambio que regreso Pepito)
-if (cambio = 25){
+var cambio = prompt (ingresa el cambio de Pepito);
+if (cambio = 25) {
     alert("Pepito es chido")
 }
-else (cambio < 25){
-    alert ("Pepito es un ratero")
+if (cambio < 25) {
+    alert ("Pepito es un pasado")
 }
+    if (cambio > 25) {
+        alert("Le dieron cambio de más")
+}
+
