@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="galeria.css">
+    <script src="main.js">
+    </script>
 </head>
 <body>
     <div id="main-container">
@@ -13,45 +15,45 @@
         </div>
     </div>
     <div id="grid-galeria">
-        <div id="img1" class="img-v">
+        <div id="img1" onclick="popup()" class="img-v">
             <div id="degradado"></div>
-            <picture id="img1" class="pic1">
-                <img src="assets/Component 5.jpg">
+            <picture id="img11" class="pic1">
+                <img id="imgv" src="assets/Component 5.jpg">
             </picture>
         </div>    
-        <div id="img2" class="img">
+        <div id="img2" onclick="popup()" class="img">
             <div id="degradado"></div>
-            <picture id="img2" class="pic2">
+            <picture id="img22" class="pic2">
                 <img src="assets/Component 6.jpg">
             </picture>
         </div>
-        <div id="img3" class="img">
+        <div id="img3" onclick="popup()" class="img">
             <div id="degradado"></div>
-            <picture id="img3" class="pic3">
+            <picture id="img33" class="pic3">
                 <img src="assets/Component 7.jpg">
             </picture>
         </div>    
-        <div id="img4" class="img">
+        <div id="img4" onclick="popup()" class="img">
             <div id="degradado"></div>
-            <picture id="img4" class="pic4">
+            <picture id="img44" class="pic4">
                 <img src="assets/Component 8.jpg">
             </picture>
         </div>
         <div id="img5" class="img">
             <div id="degradado"></div>
-            <picture id="img5" class="pic5">
+            <picture id="img55" class="pic5">
                 <img src="assets/Component 9.jpg">
             </picture>        
         </div>    
-        <div id="img6" class="img">
+        <div id="img6" onclick="popup()" class="img">
             <div id="degradado"></div>    
-            <picture id="img6" class="pic6">
+            <picture id="img66" class="pic6">
                 <img src="assets/Component 10.jpg">
             </picture>
         </div>    
-        <div id="img7" class="img">
+        <div id="img7" onclick="popup()" class="img">
             <div id="degradado"></div>
-            <picture id="img7" class="pic7">
+            <picture id="img77" class="pic7">
                 <img src="assets/Component 11.jpg">
             </picture>
         </div>    
@@ -61,7 +63,7 @@
             <div id="titulo">
                 <h2>Pasillo principal</h2>
             </div>
-            <svg id="cross" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="cross" onclick="closepopup()" width="31" height="32" viewBox="0 0 31 32" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_301_1842)">
                 <path d="M7.75 7.75L23.25 23.25M23.25 7.75L7.75 23.25" stroke="white" stroke-linecap="round"/>
                 </g>
@@ -98,8 +100,20 @@
                     </filter>
                     </defs>
                 </svg>
-                <img id="fotoprincipal" src="assets/image 16.png">    
-                <svg width="39" height="66" viewBox="0 0 39 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div id="fotosmain">
+                    <div id="reel">
+                        <img id="fotoprincipal" src="assets/image 16.png">    
+                        <img src="assets/Component 5.jpg">
+                        <img src="assets/Component 6.jpg">
+                        <img src="assets/Component 8.jpg">
+                        <img src="assets/Component 10.jpg">
+                        <img src="assets/Component 7.jpg">
+                        <img src="assets/Component 9.jpg">
+                        <img src="assets/Component 11.jpg">
+                    </div>
+                </div>
+               
+                <svg onlclick="slider()" width="39" height="66" viewBox="0 0 39 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_301_1836)">
                     <path d="M5 1L33 29L5 57" stroke="white" stroke-width="2"/>
                     </g>
