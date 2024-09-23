@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <link rel="stylesheet" href="formulariobd.css">
 </head>
 <body>
-    <h1></h1>
+    <h1>Regístrate</h1>
+    <h5>Llena todos los datos para inscribirte: </h5>
     <form id="contactForm" method="post">
-        <label for="name">Nombre: </label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        
+        <input type="text" id="name" class="registro" name="name" placeholder="Escribe completo: " required><br><br>
 
-        <label for="folio">Folio: </label><br>
-        <input type="text" id="folio" name="folio" required><br><br>
+        <input type="text" id="folio" class="registro" name="folio" placeholder="Folio PILARES: " required><br>
 
-        <label for="phone">Teléfono celular: </label><br>
-        <input type="number" id="phone" name="phone" required><br><br>
+        <h5>¿No tienes folio?</h5>
 
-        <label for="email">Correo: </label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="number" id="phone"class="registro" name="phone" placeholder="Número de celular: " required><br><br>
 
-        <label for="taller">Taller de interes: </label><br>
-        <input type="text" id="taller" name="taller" required><br><br>
+        <input type="email" id="email" class="registro" name="email" placeholder="Correo electrónico: "><br><br>
 
-        <label for="comments">Comentarios: </label><br>
-        <input type="text" id="comments" name="comments" required><br><br>
+        <input type="text" id="taller" class="registro" name="taller" placeholder="Taller: "><br><br>
 
-        <input type="submit"  value="Solicitar inscripción">
+        <input type="text" id="comments" name="comments" placeholder="Comentarios: " required><br><br>
+
+        <input type="submit" id="bottomreg" class="registro" value="Solicitar inscripción">
     </form>
 </body>
 <script>
