@@ -21,7 +21,9 @@
 
         <input type="email" id="email" class="registro" name="email" placeholder="Correo electrónico: "><br><br>
 
-        <input type="text" id="taller" class="registro" name="taller" placeholder="Taller: "><br><br>
+        <input type="edad" id="edad" class="registro" name="edad" placeholder="Edad: " required><br><br>
+
+        <input type="text" id="taller" class="registro" name="taller" placeholder="Selecciona taller: "><br><br>
 
         <input type="text" id="comments" name="comments" placeholder="Comentarios: " required><br><br>
 
@@ -33,7 +35,7 @@
             event.preventDefault(); // Prevents the default form submission
             
             const formData = new FormData(this);
-            const response = await fetch("https://script.google.com/macros/s/AKfycbwP34_3oSEbyn7Xf5NyvjtAAQxm_XJNHbIb6AsHht_L07rmujKhbQ68bCvSLh6Lq2_S/exec", { // Replace with your Google Apps Script URL
+            const response = await fetch("https://script.google.com/macros/s/AKfycbzZeAaGIwBDfE5dGncXeyKvKkVr1FschaCNi8jkROmuGQRVIX0Ctyy7qjgCNVjxiPat/exec", { // Replace with your Google Apps Script URL
                 method: "POST",
                 body: formData
             });
