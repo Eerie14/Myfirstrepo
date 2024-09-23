@@ -23,10 +23,24 @@
         <label for="taller">Taller de interes: </label><br>
         <input type="text" id="taller" name="taller" required><br><br>
 
-        <label for="commments">Comentarios: </label><br>
-        <input type="text" id="commments" name="commments" required><br><br>
+        <label for="comments">Comentarios: </label><br>
+        <input type="text" id="comments" name="comments" required><br><br>
 
         <input type="submit"  value="Solicitar inscripción">
     </form>
 </body>
+<script>
+    document.getElementById("contactform").onsubmit = async function name(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const response = await fetch("https://script.google.com/macros/s/AKfycbwgVZNXS8YzSHvcdLf9zS8h2AAHtUU8Myo-lVeozes3aYDHRWQCzkoaGWSZKWbgcjsC/exec", {method:"Post", body: FormData});
+        if(response.ok){
+            alert("Registro exitoso, te estaremos contactando.");
+            this.reset();
+        }
+        else{ 
+            alert("Vuelve a intentarlo");
+        }
+    };
+</script>
 </html>
