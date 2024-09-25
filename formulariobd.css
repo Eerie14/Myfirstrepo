@@ -2,30 +2,44 @@ body{
     font-family: Arial, Helvetica, sans-serifgit;
 }
 
+#marco{
+    margin: auto; text-align: center;
+    background-color: #ECECEC;
+    border-radius: 10px; 
+}
+
+#texto5{
+    margin: auto; text-align: left;
+}
 #contactForm {
     
 }
 .registro {
     width: 280px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 10px; 
     margin-bottom: 3%;
     padding-left: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #comments {
+    margin: auto; text-align: center;
+    display: flex; text-align: start;
     width: 280px;
     height: 80px;
-    border-radius: 10px;
+    border-radius: 10px; 
     margin-bottom: 3%;
     padding-left: 5px;
 }
 
 #bottomreg {
-    width: 280px;
-    height: 40px;
-    border-radius: 10px;
+    color: white;
+    font-size: large;
+    background-color: #009DFF;
+    width: 318px;
+    height: 45px;
+    border-radius: 10px; border-style: none;
     margin-bottom: 3%;
 }
 @media screen and (min-width: 450px)

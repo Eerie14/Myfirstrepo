@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="form">
+        <div>
+            <h1 id="titformulario">Crea un nuevo taller</h1>
+        </div>
+        <div id="formconteiner">
+            <div id="formizquierdo">
+                <p id="llena">Llena todos los campos</p>
+                <div id="forminput1">
+                    <input type="text" id="inputtn" placeholder="Nombre del taller">
+                    <input type="text" id="inputtn" placeholder="Nombre completo">
+                    <input type="text" id="inputdes" placeholder="Descripcion breve">
+                </div>
+                <div id="forminput2">
+                    <table id="tabla"  cellspacing="0" >
+                        <tr>
+                            <td><p>Seleciona los días:</p></td>
+                            <td> <p>Hora de inicio:</p></td>
+                            <td><p>Hora de final:</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="inputdia">
+                                <option value="1">Lun</option>
+                                <option value="2">Mar</option>
+                                <option value="3">Mier</option>
+                                <option value="4">Jue</option>
+                                <option value="5">Vie</option>
+                                </select> 
+                            </td>
+                            <td>
+                                <select id="inputhora">
+                                    <option value="1">09:00</option>
+                                    <option value="2">10:00</option>
+                                    <option value="3">11:00</option>
+                                    <option value="4">12:00</option>
+                                    <option value="5">13:00</option>
+                                    <option value="5">14:00</option>
+                                    <option value="5">15:00</option>
+                                    <option value="5">16:00</option>
+                                    <option value="5">17:00</option>
+                                    <option value="5">18:00</option>
+                                    <option value="5">19:00</option>
+                                    
+
+                                    </select> 
+                            </td>
+                            <td>
+                                <select id="inputhora">
+                                    
+                                    <option value="2">10:00</option>
+                                    <option value="3">11:00</option>
+                                    <option value="4">12:00</option>
+                                    <option value="5">13:00</option>
+                                    <option value="5">14:00</option>
+                                    <option value="5">15:00</option>
+                                    <option value="5">16:00</option>
+                                    <option value="5">17:00</option>
+                                    <option value="5">18:00</option>
+                                    <option value="5">19:00</option>
+                                    <option value="1">20:00</option>
+                                    
+
+                                    </select> 
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                <div id="formboton">
+                    <button id="botoninput1">+ Añadir dia</button>
+                </div>
+            </div>
+            <div id="formderecho">
+                <div id="forminput3">
+                    <input type="text" id="inputcorreocel" placeholder="Correo">
+                    <input type="text"id="inputcorreocel" placeholder="Numero celular">
+                </div>
+                <div id="subir">
+                    <div id="sube">
+                        <p>Sube un archivo:</p>
+                    </div>
+                    <div id="selsarchi">
+                        <input type="file" id="inputfile">
+                                            </div>
+                </div>
+                <div id="botonderecho">
+                    <button id="nuevotaller">Crea nuevo taller</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
