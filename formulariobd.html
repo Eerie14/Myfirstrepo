@@ -11,33 +11,41 @@
 </head>
 <body>
     <div id="marco"> 
+
         <h1>Regístrate</h1>
         <div id="texto5">
             <h5>Llena todos los datos para inscribirte: </h5>
         </div>
 
         <form id="contactForm" method="post">
+
             <div id="user">
-                <img src="assets/iconuser.png" id="iconuser">
+                <img src="assets/iconuser.png" id="iconuser" class="person">
+                <input type="text" id="name" class="registro" name="name" placeholder="Nombre completo: " required><br><br>
+            </div>
+            
+            <div id="folio">
+                <input type="text" id="folio" class="registro" name="folio" placeholder="Folio PILARES: " required><br><br>
             </div>
 
-                <input type="text" id="name" class="registro" name="name" placeholder="     Nombre completo: " required><br>
-            
-                <div>
-                <input type="text" id="folio" class="registro" name="folio" placeholder="Folio PILARES: " required><br>
-                </div>
+            <div id="texto55">
+                <h5>¿No tienes folio?</h5>
+            </div>
 
-        <div id="texto55">
-            <h5>¿No tienes folio?</h5>
-        </div>
+            <div id="movil">
+                <img src="assets/iconphone.png" id="iconphone" class="cel">
+                <input type="number" id="phone"class="registro" name="phone" placeholder="Número de celular: " required><br>
+            </div>
 
-        <div>
-            <img src="assets/iconphone.png">
-            <input type="number" id="phone"class="registro" name="phone" placeholder="Número de celular: " required><br>
-        </div>
-        
-            <input type="email" id="email" class="registro" name="email" placeholder="Correo electrónico: "><br>
+            <div id="mail">
+                <img src="assets/iconmail.png" id="iconmail" class="correo">
+            </div>
 
+            <input type="email" id="email" class="registro" name="email" placeholder="     Correo electrónico: "><br>
+
+            <div id="date">
+                <img src="assets/icondate.png" id="icondate">
+            </div>
             <input type="edad" id="edad" class="registro" name="edad" placeholder="Edad: " required><br>
 
             <input type="text" id="taller" class="registro" name="taller" placeholder="Selecciona curso interesado: "><br>
