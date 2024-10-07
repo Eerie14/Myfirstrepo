@@ -12,7 +12,18 @@ body{
 #texto5{
     margin-left: -45px;
 }
+#user{
+    position: absolute;
+}
 
+#name{
+    padding-left: 10px;
+}
+#iconuser{
+    margin-top: 10px;
+    margin-left: 60px;
+}
+    
 #texto55{
     margin-left: -170px;
 }
