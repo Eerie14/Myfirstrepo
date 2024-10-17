@@ -2,19 +2,14 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#form-column-left {
+#container{
     display: flex;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: space-between;
 }
 
 #fox {
 }
-
-#form-colum-right {
-    display: flex;
-    justify-content: flex-end;
-}
-
 #community { 
     position: relative;
     margin-top: 25px;
@@ -24,29 +19,41 @@ body {
     border-radius: 10px; border-style: groove;
     margin-bottom: 3%;
     padding-left: 15px;
+    background-color: lightcyan;
 }
 
 #signin{
     position: relative;
     margin-top: 25px;
     margin-left: 10px;
-    width: 85px;
+    width: 95px;
     height: 25px;
     border-radius: 10px; border-style: groove;
     margin-bottom: 3%;
     padding-left: 15px;
+    background-color: lightcyan;
 }
 
 #register{
     position: relative;
     margin-top: 25px;
     margin-left: 10px;
-    width: 85px;
+    width: 78px;
     height: 25px;
     border-radius: 10px; border-style: groove;
     margin-bottom: 3%;
     padding-left: 15px;
+    background-color: lightcyan;
 }
+
+input::placeholder {
+    width: 318px;
+    height: 45px;
+    margin-bottom: 3%;
+    font-weight: bold;
+    opacity: 0.5;
+    color: darkslategray;
+  }
 
 h1 { 
     text-align: center;
