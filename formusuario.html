@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formusuario.css">
+    <title>Document</title>
+</head>
+<body>
+  <form id="contactForm">
+    <div id="form">
+        <div>
+            <h1 id="titformulario">Regístrate</h1>
+        </div>
+        <div id="formconteiner">
+            <div id="formizquierdo">
+                <p id="llena">Llena todos los campos para registrarte</p>
+                <div id="forminput1">
+                    <input type="text" id="inputtn" name="name" placeholder="Nombre completo">
+                    <input type="text" id="inputtn" name="edad" placeholder="Edad">
+                    <input type="text" id="inputtn" name="folio" placeholder="Folio Pilares">
+                    
+                    <div id="textoenlace">
+                        <a href="https://interno.pilares.cdmx.gob.mx/registro"><h4>¿No tienes folio?</h4></a>
+                    </div>
+
+                    <input type="text" id="inputdes" name="comments" placeholder="Comentarios">
+                </div>
+            </div>
+            <div id="formderecho">
+                <div id="forminput3">
+                    <input type="text" id="inputcorreocel" name="email" placeholder="Correo electrónico">
+                    <input type="text"id="inputcorreocel" name="phone" placeholder="Numero celular">
+                    <input type="text" id="inputtn" name="taller" placeholder="Selecciona taller">
+                </div>
+                
+                <div id="botonderecho">
+                    <button id="nuevotaller">Envía tus datos</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+  </form>
+</body>
+<script>
+  document.getElementById("contactForm").onsubmit = async function(event) {
+         event.preventDefault(); // Prevents the default form submission
+         
+         const formData = new FormData(this);
+         const response = await fetch("https://script.google.com/macros/s/AKfycbzZeAaGIwBDfE5dGncXeyKvKkVr1FschaCNi8jkROmuGQRVIX0Ctyy7qjgCNVjxiPat/exec", { // Replace with your Google Apps Script URL
+             method: "POST",
+             body: formData
+         });
+         
+         if (response.ok) {
+             alert("Submission successful!");
+             this.reset(); // Reset the form
+         } else {
+             alert("Submission failed.");
+         }
+     };
+</script>
+
+</html>
