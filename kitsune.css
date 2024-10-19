@@ -71,6 +71,9 @@ h3 {
     color: steelblue;
  }
 
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
  #secondcontainer{
     display: flex;
     width: 100%;
