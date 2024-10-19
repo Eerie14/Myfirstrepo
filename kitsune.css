@@ -60,9 +60,32 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: cadetblue;
 }
+h2{
+    color: darkslategray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-p {
+h3 {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: steelblue;
  }
+
+ #secondcontainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+ }
+
+ #form-colum-left{
+    color: darkslategray;
+    width: 400px;
+    height: 400px;
+ }
+
+ #form-colum-right{
+    color: darkslategray;
+    width: 400px;
+    height: 400px;
+ }
+
