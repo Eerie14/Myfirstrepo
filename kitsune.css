@@ -2,14 +2,12 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#container{
+#container {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-#fox {
-}
 #community { 
     position: relative;
     margin-top: 25px;
@@ -22,7 +20,7 @@ body {
     background-color: lightcyan;
 }
 
-#signin{
+#signin {
     position: relative;
     margin-top: 25px;
     margin-left: 10px;
@@ -34,7 +32,7 @@ body {
     background-color: lightcyan;
 }
 
-#register{
+#register {
     position: relative;
     margin-top: 25px;
     margin-left: 10px;
@@ -60,10 +58,17 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: cadetblue;
 }
+
 h2{
     color: darkslategray;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+#secondcontainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+ }
 
 h3 {
     text-align: center;
@@ -74,21 +79,16 @@ h3 {
 p{
     font-family: Arial, Helvetica, sans-serif;
 }
- #secondcontainer{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
- }
 
- #form-colum-left{
+#form-colum-left{
     color: darkslategray;
     width: 400px;
     height: 400px;
- }
+}
 
- #form-colum-right{
+#form-colum-right{
     color: darkslategray;
     width: 400px;
     height: 400px;
- }
+}
 
