@@ -168,6 +168,10 @@
         font-size: 17px;
       }
 
+      a {
+        text-decoration: none;
+      }
+      
       form {
         display: flex;
         flex-direction: column;
