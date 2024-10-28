@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla horaria</title>
+    <link rel="stylesheet" href="índice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="m-container">
+        <header>
+            <div id="header" class="d-flex-r">
+                <div id="nombrepilares">
+                    <h1>Pilares Antonio Helguera</h1>
+                    <address>Andrea Castagno s/n, entre Av. Revolución y Moguel Ángel, dentro del parque Deportivo Arnaiz, Col. Nonoalco, Benito Juárez, 03700,
+                    CDMX
+                    </address>
+                    <div id="btns-header" style="margin-top: 35px;">
+                        <a href="galeria.html"><button id="galeria" class="btn">Ir a galería</button></a>
+                        <a href="eventos.html"><button id="eventos" class="btn">Eventos próximos</button></a>
+                    </div>
+                </div>
+                <div id="logos">
+                    <img id="logo-p" src="Assets/Logos Pilares.svg" alt="">
+                    <div id="redes">
+                        <a href="https://www.tiktok.com/@pilares.antonio.h"><img style="margin-right: 15px;" src="Assets/icons8-tik-tok.svg" alt="Ícono de fb"></a>
+                        <a href="https://www.facebook.com/ValGomezFarias/"><img style="padding-top: 5px;" src="Assets/Vector.svg" alt="Ícono de fb"></a>                       
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="content" class="d-flex-r">
+            <div id="categorias">
+                <div id="selec_cat">
+                    <h2>Categoría</h2>
+                    <p>Selecciona una categoría</p>
+                </div>
+                <div id="cat-cont">
+                    <div id="cat1">
+                        <div id="categoria" class="catlinks" onclick="openCity(event, 'AEconomica')">
+                            <h2 class="header-cat" >A. Económica</h2>
+                        </div>
+                        <div id="categoria" class="catlinks" onclick="openCity(event, 'CEscuela')">
+                            <h2>Ciber Escuela</h2>
+                        </div>
+                        <div id="categoria" class="catlinks" onclick="openCity(event, 'Cultura')">
+                            <h2>Cultura</h2>
+                        </div>
+                    </div>
+                    <div id="cat2">
+                        <div id="categoria" class="catlinks" onclick="openCity(event, 'General')">
+                            <h2>General</h2>
+                        </div>
+                        <div id="categoria" class="catlinks" onclick="openCity(event, 'PontePila')">
+                            <h2>Ponte Pila</h2>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div id="Talleres">
+                <div id="t-searcher" class="d-flex-r" >
+                    <h2>Talleres</h2>
+                    <div id="searcher"  class="d-flex-r">
+                        <p>Encuentra tu taller preferido y manda una solicitud de inscripción</p>
+                        <div id="Buscador" style="display: none;">
+                            <form action="">
+                                <input id="input-buscador" type="text" placeholder="Busca tu taller">
+                                <button id="btn-search" type="submit"><img id="img-search" src="Assets/mingcute_search-line.svg" alt=""></button>
+                            </form>
+                        </div>
+                        <button hidden class="btn-edit">Editar</button>
+                    </div>
+                </div>
+                <div id="talleres_container">
+                    <form id="contactForm" style="display: none;">
+                        <div id="form">
+                            <div>
+                                <h1 id="titformulario">Regístrate</h1>
+                            </div>
+                            <div id="formconteiner">
+                                <div id="formizquierdo">
+                                    <p id="llena">Llena todos los campos para registrarte</p>
+                                    <div id="forminput1">
+                                        <input type="text" id="inputtn" name="name" placeholder="Nombre completo">
+                                        <input type="text" id="inputtn" name="edad" placeholder="Edad">
+                                        <input type="text" id="inputtn" name="folio" placeholder="Folio Pilares">
+                                        
+                                        <div id="textoenlace">
+                                            <a href="https://interno.pilares.cdmx.gob.mx/registro"><h4 class="enlace">¿No tienes folio?</h4></a>
+                    
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                                <div id="formderecho">
+                                    <div id="forminput3">
+                                        <input type="text" id="inputcorreocel" name="email" placeholder="Correo electrónico">
+                                        <input type="text"id="inputcorreocel" name="phone" placeholder="Numero celular">
+                                        <input type="text" id="inputtn" name="taller" placeholder="Selecciona taller">
+                                        <input type="text" id="inputdes" name="comments" placeholder="Comentarios">
+                                    </div>
+                                           
+                                </div>  
+                            </div>
+                            <div id="botonderecho">
+                                <button id="nuevotaller">Envía tus datos</button>
+                            </div> 
+                        </div>
+                    
+                      </form>
+                    <form id="form" style="display: none;">
+                        <div>
+                            <h1 id="titformulario">Crea un nuevo taller</h1>
+                        </div>
+                        <div id="formconteiner">
+                            <div id="formizquierdo">
+                                <p id="llena">Llena todos los campos</p>
+                                <div id="forminput1">
+                                    <input type="text" id="inputtn" name="ntaller" placeholder="Nombre del taller">
+                                    <input type="text" id="inputtn" name="ntallerista" placeholder="Nombre completo">
+                                    <input type="text" id="inputdes" name="descripcion" placeholder="Descripcion breve">
+                                </div>
+                                <div id="forminput2">
+                                    <table id="tabla"  cellspacing="0" >
+                                        <tr>
+                                            <td><p>Seleciona los días:</p></td>
+                                            <td><p>Hora de inicio:</p></td>
+                                            <td><p>Hora de final:</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select id="inputdia">
+                                                <option value="1">Lun</option>
+                                                <option value="2">Mar</option>
+                                                <option value="3">Mier</option>
+                                                <option value="4">Jue</option>
+                                                <option value="5">Vie</option>
+                                                </select> 
+                                            </td>
+                                            <td>
+                                                <select id="inputhora">
+                                                    <option value="1">09:00</option>
+                                                    <option value="2">10:00</option>
+                                                    <option value="3">11:00</option>
+                                                    <option value="4">12:00</option>
+                                                    <option value="5">13:00</option>
+                                                    <option value="5">14:00</option>
+                                                    <option value="5">15:00</option>
+                                                    <option value="5">16:00</option>
+                                                    <option value="5">17:00</option>
+                                                    <option value="5">18:00</option>
+                                                    <option value="5">19:00</option>
+                                                    
+                
+                                                    </select> 
+                                            </td>
+                                            <td>
+                                                <select id="inputhora">
+                                                    
+                                                    <option value="2">10:00</option>
+                                                    <option value="2">10:30</option>
+                                                    <option value="3">11:00</option>
+                                                    <option value="4">12:00</option>
+                                                    <option value="5">13:00</option>
+                                                    <option value="5">14:00</option>
+                                                    <option value="5">15:00</option>
+                                                    <option value="5">16:00</option>
+                                                    <option value="5">17:00</option>
+                                                    <option value="5">18:00</option>
+                                                    <option value="5">19:00</option>
+                                                    <option value="1">20:00</option>
+                                                    
+                
+                                                    </select> 
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                                <div id="formboton">
+                                    <button id="botoninput1">+ Añadir dia</button>
+                                </div>
+                            </div>
+                            <div id="formderecho">
+                                <div id="forminput3">
+                                    <input type="text" id="inputcorreocel" placeholder="Correo">
+                                    <input type="text"id="inputcorreocel" placeholder="Numero celular">
+                                </div>
+                                <div id="subir">
+                                    <div id="sube">
+                                        <p>Sube un archivo:</p>
+                                    </div>
+                                    <div id="selsarchi">
+                                        <input type="file" id="inputfile">
+                                                            </div>
+                                </div>
+                                <div id="botonderecho">
+                                    <button id="nuevotaller">Crea nuevo taller</button>
+                                </div>
+                            </div>
+                
+                
+                        </div>
+                    </form>
+
+                    <div id="PontePila" class="tabcontent">
+                        <h1 id="cat-tittle">Ponte Pila</h1>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/yoga.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Yoga</h2>
+                                <h3 id="t-tallerista">Alejandra Medina</h3>
+                                <p id="d-taller">Taller enfocado en el técnicas de auto cuidado y expresión corporal</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 4813 8150</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Vie de 14 hrs a 18 hrs</p>
+                                </div>
+                                <button class="btn-ins" onclick="myFunction()" >Inscríbete</button>
+                                
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" class="imagen-taller" src="Assets/kickb.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Kick boxing </h2>
+                                <h3 id="t-tallerista">José Alberto Morales Gonzalez </h3>
+                                <p id="d-taller">aprenderás a combatir bajo las reglas del kick boxing y tendrás un desarrollo físico y mental</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 2017 9873</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Sab 15 a 16 hrs y 16 a 17 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/box.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Box</h2>
+                                <h3 id="t-tallerista">José Alberto Morales Gonzalez </h3>
+                                <p id="d-taller">aaprenderás las técnicas del boxeo</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 2017 9873</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Vie de 15 a 17 hrs y 17 a 18 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="Cultura" class="tabcontent">
+                        <h1 id="cat-tittle">Cultura</h1>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/arte contemporaneo.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Arte contemporaneo</h2>
+                                <h3 id="t-tallerista">Alberto Pazaran Rodriguez</h3>
+                                <p id="d-taller">artes plasticas</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>artesplasticas.pilares@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>jue y vie 16a 20 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/creacionliterariajpeg.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Creación Literaria</h2>
+                                <h3 id="t-tallerista">Enid Lugo F.</h3>
+                                <p id="d-taller">Aprender a escribir cuentos, poemas , novelas mejora sintaxis y redaccion</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>56 1311 3551</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Mie y Vie de 13 a 14 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/ludotecaybebeteca.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Ludoteca y bebeteca</h2>
+                                <h3 id="t-tallerista">Diana Hernández</h3>
+                                <p id="d-taller">Actividades para el desarrollo infantil mediante juegos.</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 4581 7496</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Vie de 16:30 a 17:30 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/destreza-manual-adultos.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Destreza manual con adultos mayores</h2>
+                                <h3 id="t-tallerista">Flavia Salomón e Iliana Malagón</h3>
+                                <p id="d-taller">Actividades que ayuden a ejercitar la mente y prevenir la pérdida de memoria</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>flaviasalomonlopez@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Viernes de 12 a 13 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/reciclaje-lana-blog.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Reciclaje y renovación de prendas</h2>
+                                <h3 id="t-tallerista">Cecilia Muñoz García</h3>
+                                <p id="d-taller">Reciclaje y renovación de prendas</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>55 4788 4045</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Viernes de 13 a 17 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div><div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/introduccionartes.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Introducción a las artes plásticas</h2>
+                                <h3 id="t-tallerista">Edgar Mauricio Figueroa García</h3>
+                                <p id="d-taller">Taller enfocado a visibilizar la expresión artística y los derechos culturales de la comunidad con las artes plásticas con una introducción básica.</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>55 4813 8150</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun, Mie y Vie de 13 a 17 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/telardecintura.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Telar de cintura</h2>
+                                <h3 id="t-tallerista">Flavia Salomón</h3>
+                                <p id="d-taller">Técnicas básicas para la elaboración de morrales, caminos de mesa, carpetas y prendas</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>flaviasalomonlopez@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun Mie y Vie 10 a 14 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/tatuaje.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Dibujo orientado al tatuaje </h2>
+                                <h3 id="t-tallerista">E. Viridiana García R.</h3>
+                                <p id="d-taller">Introducción al dibujo y actividades teórico/prácticas en tatuaje básico</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>5512994191</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun Mie y Vie de 11:00 hrs a 15:00 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/cineclub.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Cine club</h2>
+                                <h3 id="t-tallerista">Edgar Mauricio Figueroa García</h3>
+                                <p id="d-taller">taller enfocado en apreciar y disfrutar el séptimo arte con las proyecciones de películas para toda la comunidad </p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>5516172055</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Miércoles de 15:30 a 18:30 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/bebeteca.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Bebeteca</h2>
+                                <h3 id="t-tallerista">Noemi García García</h3>
+                                <p id="d-taller">Actividades lúdicas para niños de 1-5 años</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>-</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/reciclaje-lana-blog.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Reciclaje y renovación de prendas</h2>
+                                <h3 id="t-tallerista">Cecilia Muñoz García</h3>
+                                <p id="d-taller">Reciclaje y renovación de prendas</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 4788 4045</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Mie 16 a 19 hrs, </p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="AEconomica" class="tabcontent">
+                        <h1 id="cat-tittle">Autonomía Económica</h1>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/huertos urbanos.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Huertos urbanos y cosecha de agua de lluvia</h2>
+                                <h3 id="t-tallerista">Isaura Cecilia Robles Cuellar</h3>
+                                <p id="d-taller">Cultivo de hortalizas y jardineria</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 1902 1011</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>lu a vie12 a 19 hrs ma13 a 17 hrs jue 12 a 17 hrs </p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/emprendimiento.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Emprendimiento</h2>
+                                <h3 id="t-tallerista">Claudia</h3>
+                                <p id="d-taller">Manejo de estrategias de comercialización</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>claudiavs22012021@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>mar , jue ,vie y sab 10  a 17 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/carpinteria.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Carpinteria</h2>
+                                <h3 id="t-tallerista">Yasmin perez vargas</h3>
+                                <p id="d-taller">Carpinteria Basica y Decorativa</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 3483 1166</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>mar a vie 12 a 20 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/electronicos.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Electrónicos</h2>
+                                <h3 id="t-tallerista">Reyna Bucio</h3>
+                                <p id="d-taller">Descubrir por dentro una bocina Mayo</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 6866 5005</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Viernes de 16 a 18 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/confecciontextil2.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Confeccion Textil</h2>
+                                <h3 id="t-tallerista">María guadalupe Calderon</h3>
+                                <p id="d-taller">Elaboracion y manejo de prendas en tela</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 5555 5555</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun y Vie de 15 a 20 hrs, Mar Jue y Sab de 10 a 15 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/diseño de imagen.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Diseño de Imagen</h2>
+                                <h3 id="t-tallerista">Mary Gpe García Bobadilla</h3>
+                                <p id="d-taller">Masajes faciales, reafirmantes, reductivos, preparación de aceites</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 8172 3054</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Sábado de 10 hrs a 15 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/confeccion textil1.avif" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Confeccion Textil</h2>
+                                <h3 id="t-tallerista">Maria Gpe García Bobadilla</h3>
+                                <p id="d-taller">Elaboracion y manejo de prendas en tela</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 8172 3054</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>lunes a sabado excepto miercoles</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/los-beneficios-de-la-electricidad-residencial.png" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Electricidad Residencial</h2>
+                                <h3 id="t-tallerista">Reyna Bucio</h3>
+                                <p id="d-taller">Conexiones Eléctricas de una casa</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>maestrasant20@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Mar y Juev de 11:30 a 13:00 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="CEscuela" class="tabcontent">
+                        <h1 id="cat-tittle">Ciber Escuela</h1>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/regularizaciondeniñosdelecturayescritura.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Regularizacion lectura y escritura</h2>
+                                <h3 id="t-tallerista">Maribel</h3>
+                                <p id="d-taller">Regularizar a niños con problemas de lectura y escritura</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>maribel.guillen.roman@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lu, mar y jue 15a 16 hrs sab 12 a 13 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/diseñowe1.webp" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Diseño Web</h2>
+                                <h3 id="t-tallerista">David Ferrusca</h3>
+                                <p id="d-taller">Crea tu propio sitio Web desde un prototipo de alta fidelidad</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>ferruscarea30@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun y Mie 16 a 18 hrs </p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/poesia.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Tardes de poesía</h2>
+                                <h3 id="t-tallerista">Silvia Navarro Torres</h3>
+                                <p id="d-taller">Lectura y goce de la poesía a través de diferentes estilos y autores.</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>maestrasant20@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Jue de 18 a 19:45 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/saludemocional.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Conversatorio salud emocional</h2>
+                                <h3 id="t-tallerista">Maribel Guillen Roman</h3>
+                                <p id="d-taller">Conversatorio sobre temas de salud emocional como: amor, desamor, maternidad, ansiedad, estres, funcionamiento del cerebro etc.</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>maribel.guillen.roman@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Mie de 11 a 12 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/diseño ux.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Programación y Diseño UX</h2>
+                                <h3 id="t-tallerista">David Ferrusca</h3>
+                                <p id="d-taller">Aprende a programar y a diseñar plataformas digitales</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>ferruscarea30@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Vie de 16 a 18 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/inea.png" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Asesorias INEA</h2>
+                                <h3 id="t-tallerista">Maribel Guillen Roman</h3>
+                                <p id="d-taller">Información, asesorias.</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>maribel.guillen.roman@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Vie de 12 a 14 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/blender.png" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Blender (modelado 3D)</h2>
+                                <h3 id="t-tallerista">David Ferrusca</h3>
+                                <p id="d-taller">Aprende a modelar a comprende los espacios trdimensionales en blender y crea tu primer webaap de realidad virtual o aumentada</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>maribel.guillen.roman@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Vie de 12 a 14 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/inea2.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">INEA</h2>
+                                <h3 id="t-tallerista">Iliana Malagón</h3>
+                                <p id="d-taller">Taller enfocado en el técnicas de auto cuidado y expresión corporal</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>ferruscarea30@gmail.com</p>
+                                    </div>
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>55 4813 8150</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Vie de 14 hrs a 18 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/geografia.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Asesorías academicas Biologia y Geografía</h2>
+                                <h3 id="t-tallerista">Maribel Guillen Roman</h3>
+                                <p id="d-taller">Asesorías academicas Biologia y Geografía</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>maribel.guillen.roman@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Lun a Sab de 14 a 16 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/computacion a la introduccion  a las tecnologias.jpeg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Computación- Introducción a las tecnologías</h2>
+                                <h3 id="t-tallerista">César Cabrera</h3>
+                                <p id="d-taller">Aprende a utilizar paquetería básica, majnejo de internet y correo electrónico</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>vivirconsoul@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Mar y Jue de 16:30 a 17:30 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/basededatos.png" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Base de datos</h2>
+                                <h3 id="t-tallerista">David Ferrusca Rea</h3>
+                                <p id="d-taller">Aprende conceptos básicos de base datos y lenguage SQL</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="mail" class="d-flex-r" style="margin-right: 35px;">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/mail.svg" alt="">
+                                        <p>ferruscarea30@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Mar y Jue de 16 a 18 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="General" class="tabcontent">
+                        <h1 id="cat-tittle">General</h1>
+                        <div id="taller" class="d-flex-r active">
+                            <img id="img-taller" src="Assets/karaoke.jpg" alt="">
+                            <div id="t-descripcion">
+                                <h2 id="t-taller">Karaoke</h2>
+                                <h3 id="t-tallerista">Ana Ponce y Rodolfo</h3>
+                                <p id="d-taller">Karaoke y baile</p>
+                                <div id="contacto" class="d-flex-r">
+                                    <div id="telefono" class="d-flex-r">
+                                        <img style="margin-right: 10px; width: 18px;" src="Assets/phone.svg" alt="">
+                                        <p>https://chat.whatsapp.com/DVP484XvNBQ3W0NaNPJp8d</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="horarios">
+                                <div id="horario" class="d-flex-r">
+                                    <img style="margin-right: 10px; width: 18px;" src="Assets/clock.svg" alt="">
+                                    <p>Sáb de 16:00 a 17:00 hrs</p>
+                                </div>
+                                <button class="btn-ins">Inscríbete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </div>   
+</body>
+<script>
+   
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+function myFunction() {
+    var x = document.getElementById("contactForm");
+    if (x.style.display = "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+     document.getElementById("contactForm").onsubmit = async function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            
+            const formData = new FormData(this);
+            const response = await fetch("https://script.google.com/macros/s/AKfycbzZeAaGIwBDfE5dGncXeyKvKkVr1FschaCNi8jkROmuGQRVIX0Ctyy7qjgCNVjxiPat/exec", { // Replace with your Google Apps Script URL
+                method: "POST",
+                body: formData
+            });
+            
+            if (response.ok) {
+                alert("Submission successful!");
+                this.reset(); // Reset the form
+            } else {
+                alert("Submission failed.");
+            }
+        }
+
+</script>
+</html

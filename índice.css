@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto";
+}
+button:hover{
+    cursor: pointer;
+}
+.d-flex-c{
+    display: flex;
+    flex-direction: column;  
+}
+.d-flex-r{
+    display: flex;
+    flex-direction: row;  
+}
+#m-container{
+    max-width: 1460px;
+    margin: 0 auto;
+    padding: 0 50px 0 50px;
+}
+#header{
+    background-image: url(../Assets/Banner.jpg);
+    color: white;
+    justify-content: space-between;
+    height: 280px; 
+    width: 1460px;
+    margin-left: -230px;
+    padding-left: 230px;
+    padding-right: 230px;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+}
+#nombrepilares{
+    align-items:stretch;
+    width: 400px;
+    padding-top: 25px;
+}
+#logos{
+    padding-top: 25px;
+}
+#redes{
+    display: flex;
+    justify-content: end;
+}
+#content{
+    padding-top: 25px;
+}
+#categoria{
+    height: 100px;
+    width: 450px;
+    box-shadow: 1px 2px 6px -1px rgba(0,0,0,0.10);
+-webkit-box-shadow: 1px 2px 6px -1px rgba(0,0,0,0.10);
+-moz-box-shadow: 1px 2px 6px -1px rgba(0,0,0,0.10);
+    border-radius: 20px;
+    color:black;
+    text-align: center;
+    align-content: center;
+    margin: 13px 0 13px 0;
+    margin-right: 20px;
+}
+#categoria:hover{
+    color:#991C46;
+    cursor: pointer;
+}
+#categoria:active{
+    color:#991C46;
+}
+#categoria:focus{
+    color:#991C46;
+}
+.header-cat:active{
+    color:#991C46;
+}
+.header-cat:focus{
+    color:#991C46;
+}
+#cat-tittle{
+    font-weight: bolder;
+    color:#155D4F;
+    margin-top: 20px;
+    font-size: 20pt;
+}
+#Talleres{
+    man-width: 800px;
+    min-width: 300px
+}
+#t-searcher{
+    display: flex;
+    align-items: center;
+}
+#searcher{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+#input-buscador{
+    width: 415px;
+    height: 32px;
+    border-radius: 8px;
+    padding-left: 15px;
+}
+.btn-edit{
+    border: 3px solid #9c9c9c;
+}
+#talleres_container{
+    background-color: #FAFAFA;
+    border-radius: 16px;
+    padding: 0px 10px 30px 10px;
+    overflow-y: scroll;
+    width: 990px;
+    max-height: 525px;
+    margin-top: 15px;
+}
+#img-taller{
+    width: 250px;
+    height: 124px;
+    overflow: hidden;
+}
+#taller{
+    margin-top: 30px;
+}
+#t-taller{
+    color:#991C46;
+    font-weight: 1000;
+
+}
+#contacto{
+    margin-top: 15px;
+}
+#t-descripcion{
+    margin-left: 15px;
+    width: 430px;
+}
+#horarios{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap-reverse;
+    width: 330px;
+}
+.btn-ins{
+    background-color: #155D4F;
+    color: white;
+    padding: 10px;
+    width: 132px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+
+
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+.tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  /*css de eventos*/
+  #tituloevento{
+    text-align: center;
+  }
+  #eventoscontainer{
+    margin: auto;
+    display: flex;
+  }
+  #card{
+    width: 360px;
+    height: 520px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #FAFAFA;
+    margin-right: 25px;
+    position: relative;
+  }
+  .cardpic{
+    overflow: hidden;
+    height: 260px;
+    width: 100%;
+  }
+  .textcard{
+    height: 180px;
+    padding: 15px 20px 15px 20px;
+    text-align: justify;
+  }
+  #moreinfo{
+    justify-content: end;
+    text-align: end;
+  }
+  #fecha-horario{
+    padding: 15px 20px 15px 20px;
+    position: absolute;
+    bottom: 10px;
+  }
+  #fecha{
+    margin-right: 65px;
+  }
+  
+@media only screen and (max-width: 431px) {
+   #m-container{
+    width:90vw;
+    padding:0px;
+    height: 100vh;
+   }
+   
+   #header{
+    height:150px;
+    width: 40%;
+    margin-left: -25px;
+    padding-left: 25px;
+    justify-content: space-between;
+   }
+   #nombrepilares h1{
+    font-size: 16pt;
+   }
+   #nombrepilares address{
+    display: none;
+   }
+   #logos{
+    margin-left: 70px;
+   }
+   #logo-p{
+    width: 150px;
+   }
+   #btns-header{
+    display: flex;
+    
+   }
+   #selec_cat
+   {
+    display: flex;
+    flex-direction: row;
+   }
+   #N-Pilares{
+    font-size: 12pt;
+   }
+   #content{
+    flex-direction: column;
+   }
+   #cat-cont{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+   }
+   #cat1{
+    display: flex;
+   }
+   #cat2{
+    display: flex;
+   }
+   #categoria{
+    width: 100px;
+    height: 45px;
+    border-radius: 15px;
+    background-image: none;
+    color: black;
+    font-size: 8pt;
+    padding: 0 10px 0 10px ;
+   }
+   #categoria:hover{
+    background-color: #991C46;
+    color: white;
+    cursor: pointer;
+   }
+   #Talleres{
+    width: 95vw;
+   }
+   #input-buscador{
+    width: 350px;
+   }
+   #talleres_container{
+    width: 370px;
+   }
+   #img-taller{
+    width: 80px;
+    height: 50px;
+   }
+   #t-descripcion{
+    width: 150px;
+    margin-left: 10px;
+   }
+   #t-taller{
+    font-size: 12pt;
+   }
+   #t-tallerista{
+    font-size: 9pt;
+   }
+
+   #d-taller{
+    font-size: 9pt;
+    display: none;
+   }
+   #contacto{
+    display:none;
+   }
+   #horarios{
+    font-size: 8pt;
+   }
+   .btn-ins{
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    padding: 5px;
+   }
+}
+  #form{
+    width: 820px;
+    height: 560px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+#formconteiner{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+#titformulario{
+   padding-top: 30px;
+}
+#formizquierdo{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+#llena{
+    text-align: left;
+}
+#forminput1{
+    display: flex;
+    flex-direction: column;
+    }
+    #inputtn{
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 375px;
+        height: 40px;
+        padding-left: 10px;
+    }
+    #inputdes{
+        margin-top: 10px;
+        border-radius: 5px;
+        height: 80px;
+        padding: 10px;
+        padding-left: 10px;
+    }
+    #forminput2{
+        margin-top: 10px;
+        width: 355px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+    #tabla{
+        text-align: left;
+    }
+    #input2text{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    #input2entradas{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+    #inputdia{
+        
+        margin-right: 50px;
+        width: 65px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    #inputhora{
+        width: 100px;
+        height: 40px;
+        margin-right: 5px;
+        
+        
+        border-radius: 5px;
+        padding: 10px;
+    }
+    #formboton{
+        margin-top: 10px;
+        
+    }
+    #botoninput1{
+        width: 100%;
+        height: 36px;
+        background-color: #4A9183;
+        color: white;
+        border-radius: 5px;
+    }
+    #formderecho{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        
+    }
+    #forminput3{
+        display: flex;
+        flex-direction: column;
+    }
+    #inputcorreocel{
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 375px;
+        height: 40px;
+        padding-left: 10px;
+    }
+
+    #subir{
+        display: flex;
+        flex-direction: column;
+    }
+    #selsarchi{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 40px;
+    }
+    #inputfile{
+        width: 100%;
+        height: 40px;
+    }
+    #nuevotaller{
+        width: 100%;
+        height: 36px;
+        background-color: #A12F32;
+        color: white;
+        border-radius: 5px;
+    }
+    #sube{
+        text-align: left;
+    }
